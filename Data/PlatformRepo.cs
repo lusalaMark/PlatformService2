@@ -9,7 +9,6 @@ namespace PlatformService.Data
         public PlatformRepo(AppDbContext context)
         {
             _context = context;
-
         }
 
 
