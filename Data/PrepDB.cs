@@ -5,12 +5,13 @@ namespace PlatformService
 {
     public static class PrepDb
     {
-        public static void PrepPopulation(IApplicationBuilder app)
+        public static void PrepPopulation()
         {
-            using (var serviceScope = app.ApplicationServices.CreateScope())
+            using (var serviceScope = ApplicationServices.CreateScope())
             {
                 //var context = serviceScope.ServiceProvider.GetService<AppDbContext>();
                 SeedData(serviceScope.ServiceProvider.GetService<AppDbContext>());
+
             }
 
         }
@@ -35,6 +36,4 @@ namespace PlatformService
 
         }
     }
-
-
 }
